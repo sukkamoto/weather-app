@@ -5,7 +5,7 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
     //const request = require('request')
-
+const port = process.env.PORT || 3000
 const index_path = path.join(__dirname, '../public')
 const template_path = path.join(__dirname, '../template/views')
 const partial_path = path.join(__dirname, '../template/partials')
@@ -53,6 +53,6 @@ app.get('/weather', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('server is upat port 3000')
 })
